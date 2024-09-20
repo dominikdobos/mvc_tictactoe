@@ -15,8 +15,12 @@ export default class Mezo {
   }
 
   mezoMegjelenit() {
+    let classNev = "mezo";
+    if (this.#jel) {
+      classNev += " kivalasztott";
+    }
     let txt = `
-    <div class='mezo'>${this.#jel}</div>
+    <div class='${classNev}'>${this.#jel}</div>
     `;
     this.#szuloElem.append(txt);
   }

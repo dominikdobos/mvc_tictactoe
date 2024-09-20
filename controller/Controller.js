@@ -7,7 +7,7 @@ export default class Controller {
   constructor() {
     this.#MODELL = new Modell();
     this.#JATEKTER = $(".jatekter");
-    new Jatekter(this.#JATEKTER, 9, this.#MODELL.getLEPESEK());
+    new Jatekter(this.#JATEKTER, this.#MODELL.getLEPESEK());
     this.kivalaszt();
   }
 
@@ -20,7 +20,7 @@ export default class Controller {
 
       this.#MODELL.setSzamlalo(szamlalo);
 
-      new Jatekter(this.#JATEKTER, 9, this.#MODELL.getLEPESEK());
+      new Jatekter(this.#JATEKTER, this.#MODELL.getLEPESEK());
     });
   }
 }
