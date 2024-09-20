@@ -21,6 +21,7 @@ export default class Controller {
       this.#MODELL.setSzamlalo(szamlalo);
 
       new Jatekter(this.#JATEKTER, this.#MODELL.getLEPESEK());
+      this.#MODELL.ellenoriz();
     });
   }
 }
