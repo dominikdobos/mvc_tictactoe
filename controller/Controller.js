@@ -25,23 +25,21 @@ export default class Controller {
 
       switch (vegeredmeny) {
         case "O":
-          setTimeout(() => {
-            alert("'O' nyert!");
-          }, 2);
-          location.reload();
+          this.eredmeny(vegeredmeny + " nyert!");
           break;
         case "X":
-          setTimeout(() => {
-            alert("'X' nyert!");
-          }, 2);
-          location.reload();
+          this.eredmeny(vegeredmeny + " nyert!");
           break;
         case "-":
-          setTimeout(() => {
-            alert("Döntetlen!");
-          }, 2);
-          location.reload();
+          this.eredmeny("Döntetlen!");
       }
     });
+  }
+
+  eredmeny(szoveg) {
+    setTimeout(() => {
+      alert(szoveg);
+    }, 2);
+    location.reload();
   }
 }
