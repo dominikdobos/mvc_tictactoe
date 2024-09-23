@@ -34,25 +34,13 @@ export default class Modell {
     console.log(ALLAPOT_TOMB);
 
     if (ALLAPOT_TOMB.indexOf("OOO") >= 0) {
-      setTimeout(() => {
-        alert("'O' nyert!");
-      }, 2);
-      location.reload();
-      return;
+      return "O";
     }
     if (ALLAPOT_TOMB.indexOf("XXX") >= 0) {
-      setTimeout(() => {
-        alert("'X' nyert!");
-      }, 2);
-      location.reload();
-      return;
+      return "X";
     }
     if (this.#LEPESEK.every(Boolean)) {
-      setTimeout(() => {
-        alert("Döntetlen!");
-      }, 2);
-      location.reload();
-      return;
+      return "-";
     }
   }
 

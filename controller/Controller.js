@@ -21,7 +21,27 @@ export default class Controller {
       this.#MODELL.setSzamlalo(szamlalo);
 
       new Jatekter(this.#JATEKTER, this.#MODELL.getLEPESEK());
-      this.#MODELL.ellenoriz();
+      let vegeredmeny = this.#MODELL.ellenoriz();
+
+      switch (vegeredmeny) {
+        case "O":
+          setTimeout(() => {
+            alert("'O' nyert!");
+          }, 2);
+          location.reload();
+          break;
+        case "X":
+          setTimeout(() => {
+            alert("'X' nyert!");
+          }, 2);
+          location.reload();
+          break;
+        case "-":
+          setTimeout(() => {
+            alert("Döntetlen!");
+          }, 2);
+          location.reload();
+      }
     });
   }
 }
